@@ -38,7 +38,7 @@ class TweetsController < ApplicationController
     if !logged_in?
       redirect "/login"
     end
-    erb "/tweets/:id/edit"
+    erb :"tweets/:id/edit"
   end
   
   delete "/tweets/:id" do
