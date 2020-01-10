@@ -45,6 +45,7 @@ class TweetsController < ApplicationController
   patch "/tweets/:id/edit" do
     tweet = Tweet.find(params[:id])
     tweet.content = params[:content]
+    tweet.save
     redirect "tweets/#{params[:id]}"
   end
   
