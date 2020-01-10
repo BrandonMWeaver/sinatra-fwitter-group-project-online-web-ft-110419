@@ -1,7 +1,5 @@
 <p><%=@tweet.content%></p>
-<% if logged_in? %>
-  <form method="POST" action="/tweet/<%=@tweet.id%>">
-    <input id="hidden" type="hidden" name="_method" value="DELETE">
-    <input type="submit" value="Delete Tweet">
-  </form>
-<% end %>
+<form method="POST" action="/tweet/<%=@tweet.id%>">
+  <input id="hidden" type="hidden" name="_method" value="DELETE">
+  <input type="submit" value="Delete Tweet">
+</form>
