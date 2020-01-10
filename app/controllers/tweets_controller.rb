@@ -39,7 +39,7 @@ class TweetsController < ApplicationController
       redirect "/login"
     end
     @tweet = Tweet.find(params[:id])
-    erb :"tweets/:id/edit"
+    erb :"tweets/#{@tweet.id}/edit"
   end
   
   patch "/tweets/:id/edit" do
