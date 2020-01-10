@@ -27,7 +27,7 @@ class TweetsController < ApplicationController
   
   get "/tweets/:id" do
     @tweet = Tweet.find(params[:id])
-    if current_user.tweets.include?(@tweet)
+    if logged_in? && current_user.tweets.include?(@tweet)
       erb :"tweets/show"
     end
     redirect "/login"
