@@ -13,7 +13,7 @@ class TweetsController < ApplicationController
     erb :"tweets/new"
   end
   
-  post "/tweets/new" do
+  post "/tweets" do
     if !params[:content].empty?
       tweet = Tweet.create(params)
       tweet.user_id = current_user.id
