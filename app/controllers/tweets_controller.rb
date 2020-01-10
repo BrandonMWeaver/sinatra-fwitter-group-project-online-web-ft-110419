@@ -34,7 +34,7 @@ class TweetsController < ApplicationController
     end
   end
   
-  patch "/tweets/:id" do
+  patch "/tweets/:id/edit" do
     if !logged_in?
       redirect "/login"
     end
