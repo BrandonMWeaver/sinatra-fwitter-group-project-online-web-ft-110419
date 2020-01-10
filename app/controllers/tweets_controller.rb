@@ -34,4 +34,12 @@ class TweetsController < ApplicationController
     end
   end
   
+  patch "/tweets/:id" do
+    
+  end
+  
+  delete "/tweets/:id" do
+    
+  end
+  
 end
