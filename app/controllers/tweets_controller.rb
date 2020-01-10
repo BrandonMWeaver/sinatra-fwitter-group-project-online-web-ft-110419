@@ -35,7 +35,8 @@ class TweetsController < ApplicationController
   end
   
   patch "/tweets/:id" do
-    
+    Tweet.find(params[:id]).delete
+    redirect "/tweets"
   end
   
   delete "/tweets/:id" do
