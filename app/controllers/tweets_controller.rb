@@ -26,6 +26,7 @@ class TweetsController < ApplicationController
   end
   
   get "/tweets/:id" do
+    binding.pry
     if logged_in? && current_user.tweet_ids.include?(params[:id].to_i)
       @tweet = Tweet.find(params[:id])
       erb :"tweets/show"
